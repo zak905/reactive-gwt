@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>ReactiveGWT</title>
+
+    <script type="text/javascript" language="javascript" src="ReactiveGWT/ReactiveGWT.nocache.js"></script>
+  </head>
+  <style>
+  html, body {
+    margin: 0px;
+    padding: 0
+    }
+    .form-container {
+      display:flex;
+      flex-direction: column;
+       width: 30%;
+       margin: auto;
+    }
+  </style>
+  <body>
+    <noscript>
+      <div style="width: 22em; position: absolute; left: 50%; margin-left: -11em; color: red; background-color: white; border: 1px solid red; padding: 4px; font-family: sans-serif">
+        Your web browser must have JavaScript enabled
+        in order for this application to display correctly.
+      </div>
+    </noscript>
+  <div class="form-container">
+    <label for="url">URL:</label>
+    <input id="url" type="text"></input>
+    <label for="method">Method: </label>
+    <select id="method">
+      <option selected value="GET">GET</option>
+      <option value="POST">POST</option>
+      <option value="PUT">PUT</option>
+      <option value="DELETE">DELETE</option>
+      <option value="PATCH">PATCH</option>
+      <option value="HEAD">HEAD</option>
+      <option value="OPTIONS">OPTIONS</option>
+      <option value="CONNECT">CONNECT</option>
+      <option value="TRACE">TRACE</option>
+    </select>
+    <label for="data">Data: </label>
+    <textarea id="data"></textarea>
+    <div id="result">curl <span id="generatedCommand"></span></div>
+  </div>
+  </body>
+</html>
